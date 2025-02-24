@@ -1,0 +1,42 @@
+{
+  "name": "regex-string-replace",
+  "version": "1.0.0",
+  "description": "Replace a string with or without regex",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "npm test",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snsinahub-org/regex-string-replace.git"
+  },
+  "keywords": [
+    "actions",
+    "github",
+    "actions",
+    "npm",
+    "regex",
+    "replace",
+    "string"
+  ],
+  "author": "snsinahub",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/snsinahub-org/regex-string-replace/issues"
+  },
+  "homepage": "https://github.com/snsinahub-org/regex-string-replace#readme",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
+    "@octokit/graphql": "^8.2.1",
+    "@octokit/request": "^9.2.2",
+    "@octokit/rest": "^21.1.1",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0",
+    "mocha": "^10.0.0"
+  }
+}
