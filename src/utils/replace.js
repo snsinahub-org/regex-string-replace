@@ -1,4 +1,3 @@
-
 module.exports = class ReplaceString {
     constructor() {
         this.replace = this.replace.bind(this);
@@ -10,8 +9,8 @@ module.exports = class ReplaceString {
 
         try {
             if (pattern) {
-                // Check if the pattern is a valid regex
                 try {
+                    // Check if the pattern is a valid regex
                     const regExp = new RegExp(pattern, flags);
                     result = string.replace(regExp, replacement);
                     console.log('Result after regex replacement:', result);
