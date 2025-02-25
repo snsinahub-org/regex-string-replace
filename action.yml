@@ -18,4 +18,4 @@ outputs:
     description: 'The replaced string'
 runs:
   using: 'node20'
-  main: 'src/index.js'
+  main: 'dist/index.js'
