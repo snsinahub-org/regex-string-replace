@@ -10,19 +10,15 @@ This action allows you to replace a string using a regular expression or a simpl
   with:
   
     # The string to replace
-    # Required: true
     string: ${{ github.event.inputs.string }}
     
     # The regex to use for replacement
-    # Required: false
     regex: ${{ github.event.inputs.regex }}
     
     # The replacement string
-    # Required: false
     replacement: ${{ github.event.inputs.replacement }}
     
     # The flags to use for regex
-    # Required: false
     flags: ${{ github.event.inputs.flags }}
 ```
 
