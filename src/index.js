@@ -2,7 +2,7 @@ const github = require('@actions/github')
 const core = require('@actions/core')
 const _ = require('lodash')
 const fs = require('fs')
-const replace = require('./utils/replace.js')
+const ReplaceString = require('./utils/replace.js')
 
 async function run() {
     try {
@@ -28,7 +28,9 @@ async function run() {
         console.log('GITHUB_ACTION:', process.env.GITHUB_ACTION);
         console.log('GITHUB_ACTIONS:', process.env.GITHUB_ACTIONS);
       
-        let replacedString = replace(string, regex, replacement, flags);
+        
+        let Release = new ReleaseString();
+        let replacedString = Release.replace(string, regex, replacement, flags);
       
         fs.appendFileSync(process.env.GITHUB_OUTPUT, "replaced_string=" + replacedString);
       } catch (error) {
