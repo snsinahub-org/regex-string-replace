@@ -29,8 +29,8 @@ async function run() {
         console.log('GITHUB_ACTIONS:', process.env.GITHUB_ACTIONS);
       
         
-        let Release = new ReleaseString();
-        let replacedString = Release.replace(string, regex, replacement, flags);
+        let Replace = new ReplaceString();
+        let replacedString = Replace.replace(string, regex, replacement, flags);
       
         fs.appendFileSync(process.env.GITHUB_OUTPUT, "replaced_string=" + replacedString);
       } catch (error) {
