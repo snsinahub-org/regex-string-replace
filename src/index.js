@@ -2,7 +2,7 @@ const github = require('@actions/github')
 const core = require('@actions/core')
 const _ = require('lodash')
 const fs = require('fs')
-const replace = require('./utils/replace')
+const replace = require('./utils/replace.js')
 
 async function run() {
     try {
