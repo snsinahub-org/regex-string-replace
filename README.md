@@ -81,7 +81,7 @@ jobs:
     steps:
       - name: Replace string
         id: replace
-        uses: snsinahub-org/regex-string-replace@feature/init
+        uses: snsinahub-org/regex-string-replace@v1.0.0
         with:
           string: ${{ github.event.inputs.string }}
           replacement: ${{ github.event.inputs.replacement }}
