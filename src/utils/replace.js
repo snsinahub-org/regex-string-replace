@@ -5,13 +5,20 @@ module.exports = class ReplaceString {
   }
 
   replace(string, regex, replacement, flags) {
+    console.log(string, regex, replacement, flags);
     if (regex) {
+      
       // Perform regex replacement
       const regExp = new RegExp(regex, flags);
-      return string.replace(regExp, replacement);
+      
+      const result = string.replace(regExp, replacement);
+      console.log('Result after regex replacement:', result);
+      return result;
     } else {
       // Perform simple string replacement
-      return string.split(regex).join(replacement);
+      const result = string.split(regex).join(replacement);
+      console.log('Performing simple string replacement', result);
+      return result;
     }
   }
 }
