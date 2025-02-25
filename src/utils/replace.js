@@ -12,10 +12,12 @@ module.exports = class ReplaceString {
       const regExp = new RegExp(regex, flags);
       
       const result = string.replace(regExp, replacement);
+      console.log('Result after regex replacement:', result);
       return result;
     } else {
       // Perform simple string replacement
       const result = string.split(regex).join(replacement);
+      console.log('Performing simple string replacement', result);
       return result;
     }
   }
