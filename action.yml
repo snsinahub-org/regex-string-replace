@@ -1,0 +1,21 @@
+name: regex-string-replace
+description: Replace a string with or without regex
+inputs:
+  string:
+    description: 'The string to replace'
+    required: true
+  regex:
+    description: 'The regex to use for replacement'
+    required: false
+  replacement:
+    description: 'The replacement string'
+    required: false
+  flags:
+    description: 'The flags to use for regex'
+    required: false
+outputs:
+  replaced_string:
+    description: 'The replaced string'
+runs:
+  using: 'node20'
+  main: 'src/index.js'
