@@ -1,3 +1,5 @@
+const _ = require('lodash');
+
 module.exports = class ReplaceString {
     constructor() {
         this.replace = this.replace.bind(this);
@@ -10,8 +12,10 @@ module.exports = class ReplaceString {
         try {
             if (pattern) {
                 try {
+                    // Sanitize the pattern
+                    const safePattern = _.escapeRegExp(pattern);
                     // Add 'i' flag for case-insensitive matching
-                    const regExp = new RegExp(pattern, flags + 'i');
+                    const regExp = new RegExp(safePattern, flags + 'i');
                     result = string.replace(regExp, replacement);
                     console.log('Result after regex replacement:', result);
                 } catch (regexError) {
